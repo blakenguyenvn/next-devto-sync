@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import { HeaderMiddle } from 'components/headerMiddle'
+import { FooterSocial } from 'components/footerSocial'
+import { HeroBullets } from 'components/heroBullets'
 import { headersConfig } from 'mockData/ui'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,9 +20,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <HeaderMiddle links={headersConfig.links} />
-        <div className={styles.center}>
-          <h1>Welcome to SimflexCloud</h1>
-        </div>
+        <HeroBullets />
+        <FooterSocial />
       </main>
     </>
   )
