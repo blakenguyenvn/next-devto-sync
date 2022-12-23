@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import { HeaderTabs } from 'components/headerTabs'
+import { HeaderMiddle } from 'components/headerMiddle'
 import { headersConfig } from 'mockData/ui'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <HeaderTabs user={headersConfig.user} tabs={headersConfig.tabs} />
+        <HeaderMiddle links={headersConfig.links} />
         <div className={styles.center}>
           <h1>Welcome to SimflexCloud</h1>
         </div>
