@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import { HeaderMiddle } from 'components/headerMiddle'
 import { FooterSocial } from 'components/footerSocial'
 import { HeroBullets } from 'components/heroBullets'
-import { headersConfig } from 'mockData/ui'
+import { headersConfig } from 'config/ui'
 
 const inter = Inter({ subsets: ['latin'] })
 
