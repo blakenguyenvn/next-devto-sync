@@ -1,5 +1,6 @@
-import { createStyles, Container, Group, ActionIcon, Text } from '@mantine/core';
+import { createStyles, Container, Group, ActionIcon, Text, Image } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import logo from 'assets/logo_wide.svg';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -15,6 +16,7 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     paddingTop: theme.spacing.xl,
     paddingBottom: theme.spacing.xl,
+    maxWidth: '100%',
 
     [theme.fn.smallerThan('xs')]: {
       flexDirection: 'column',
@@ -34,7 +36,7 @@ export function FooterSocial() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Text>SimflexCloud</Text>
+        <Image className={classes.logo} src={logo.src} alt={'SimflexCloud'} width={200} />
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
             <IconBrandTwitter size={18} stroke={1.5} />

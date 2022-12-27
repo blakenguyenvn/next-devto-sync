@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { createStyles, Header, Group, ActionIcon, Container, Burger, Text } from '@mantine/core';
+import Link from 'next/link';
+import { createStyles, Header, Image, Group, ActionIcon, Container, Burger, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
-import { MantineLogo } from '@mantine/ds';
+import logo from 'assets/logo_wide.svg';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -10,6 +11,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 56,
+    maxWidth: '100%',
 
     [theme.fn.smallerThan('sm')]: {
       justifyContent: 'flex-start',
@@ -74,27 +76,25 @@ interface HeaderMiddleProps {
 
 export function HeaderMiddle({ links }: HeaderMiddleProps) {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [active, setActive] = useState('');
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
-    <a
-      key={link.label}
+    <Link
+      key={link.key}
       href={link.link}
       className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
     >
       {link.label}
-    </a>
+    </Link>
   ));
 
   return (
     <Header height={56} mb={120}>
       <Container className={classes.inner}>
-        <Text className={classes.logo}>SimflexCloud</Text>
+        <Link href="/">
+          <Image className={classes.logo} src={logo.src} alt={'SimflexCloud'} width={200} />
+        </Link>
         <Burger opened={opened} onClick={toggle} size="sm" className={classes.burger} />
         <Group className={classes.links} spacing={5}>
           {items}
