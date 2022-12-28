@@ -1,17 +1,17 @@
 export const headersConfig = {
   "links": [
     {
-      "key": "about",
+      "id": "about",
       "link": "/about",
       "label": "About me"
     },
     {
-      "key": "portfolio",
+      "id": "portfolio",
       "link": "/portfolio",
       "label": "Portfolio"
     },
     {
-      "key": "blogs",
+      "id": "blogs",
       "link": "/blogs",
       "label": "Blogs"
     }
@@ -22,6 +22,7 @@ export const profile = {
   "image": "https://media.licdn.com/dms/image/C5616AQFWM1tINUFoUg/profile-displaybackgroundimage-shrink_350_1400/0/1633187430329?e=1677715200&v=beta&t=F33OfJoW4OaQ5T3a1XWd3_vk2H7dUGDR0L4gpVmpLuE",
   "avatar": "https://media.licdn.com/dms/image/C5603AQEIlw6fDSDayw/profile-displayphoto-shrink_400_400/0/1650685613666?e=1677715200&v=beta&t=SOeHiiDOt0nY_st9_4c0dlXz9_hWnMwvyCbxg2H9P2E",
   "name": "Jack Dao",
+  "email": "jack.dao@gmail.com",
   "job": "Devops",
   "stats": [
     {

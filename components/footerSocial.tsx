@@ -36,7 +36,7 @@ export function FooterSocial() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Image className={classes.logo} src={logo.src} alt={'SimflexCloud'} width={200} />
+        <Image src={logo.src} alt={'SimflexCloud'} width={200} />
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
             <IconBrandTwitter size={18} stroke={1.5} />

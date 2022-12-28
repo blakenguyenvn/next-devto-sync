@@ -50,6 +50,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface FeatureImage {
+  id: string;
   image: string;
   title: React.ReactNode;
   description: React.ReactNode;

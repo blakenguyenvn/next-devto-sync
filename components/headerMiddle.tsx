@@ -71,7 +71,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface HeaderMiddleProps {
-  links: { link: string; label: string }[];
+  links: { link: string; label: string; id: string }[];
 }
 
 export function HeaderMiddle({ links }: HeaderMiddleProps) {
@@ -81,7 +81,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
 
   const items = links.map((link) => (
     <Link
-      key={link.key}
+      key={link.id}
       href={link.link}
       className={cx(classes.link, { [classes.linkActive]: active === link.link })}
     >

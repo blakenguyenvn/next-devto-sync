@@ -27,8 +27,37 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Build Project Under Production mode
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+First, run build under production mode:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+yarn build
+```
+
+All JavaScript code inside .next has been compiled and browser bundles have been minified to help achieve the best performance and support all modern browsers.
+
+Then, we can start a server with the built codes by command:
+```bash
+yarn start
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Deployment
+The full documentation: https://nextjs.org/docs/deployment
+
+Summary, we can deploy by many ways: 
+- Self-Hosting: https://nextjs.org/docs/deployment#self-hosting
+
+- Vercel: https://nextjs.org/docs/deployment#managed-nextjs-with-vercel
+
+- Managed Server (AWS Copilot, Heroku, ...):
+https://nextjs.org/docs/deployment#managed-server
+
+- Static Only:
+https://nextjs.org/docs/deployment#static-only
+
+- Serverless (AWS Serverless, Azure Static Web Apps):
+https://nextjs.org/docs/deployment#static-only

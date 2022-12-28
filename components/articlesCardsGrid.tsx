@@ -1,6 +1,6 @@
 import { createStyles, SimpleGrid, Card, Image, Text, Container, AspectRatio } from '@mantine/core';
 import { ArticleCard } from './articleCard';
-import { articlesData } from 'config/articles'
+import { articlesData } from '../config/articles'
 
 const useStyles = createStyles((theme) => ({
   card: {

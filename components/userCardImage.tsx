@@ -14,6 +14,7 @@ interface UserCardImageProps {
   image: string;
   avatar: string;
   name: string;
+  email: string;
   job: string;
   stats: { label: string; value: string }[];
 }
