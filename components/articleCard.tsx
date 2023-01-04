@@ -1,4 +1,5 @@
 import { createStyles, Card, Image, ActionIcon, Group, Text, Avatar, Badge } from '@mantine/core';
+import Link from 'next/link';
 import { IconHeart, IconBookmark, IconShare } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
@@ -18,6 +19,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface ArticleCardProps {
+  id: string;
   image: string;
   category: string;
   title: string;
@@ -30,6 +32,7 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({
+  pid,
   image,
   category,
   title,
@@ -46,9 +49,11 @@ export function ArticleCard({
 
       <Badge>{category}</Badge>
 
-      <Text weight={700} className={classes.title} mt="xs">
-        {title}
-      </Text>
+      <Link href={`/post/${pid}`}>
+        <Text weight={700} className={classes.title} mt="xs">
+          {title}
+        </Text>
+      </Link>
 
       <Group mt="lg">
         <Avatar src={author.image} radius="sm" />

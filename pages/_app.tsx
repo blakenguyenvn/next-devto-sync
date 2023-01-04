@@ -1,6 +1,9 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
+import '../styles/postDetail.css';
+import '../styles/postView.css';
+import '../styles/postContent.css';
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;

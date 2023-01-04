@@ -1,6 +1,8 @@
+import { useState, useEffect } from 'react';
 import { createStyles, SimpleGrid, Card, Image, Text, Container, AspectRatio } from '@mantine/core';
+import { usePosts } from '../swr/hooks';
 import { ArticleCard } from './articleCard';
-import { articlesData } from '../config/articles'
+import { articlesData } from '../config/articles';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -20,15 +22,21 @@ const useStyles = createStyles((theme) => ({
 
 export function ArticlesCardsGrid() {
   const { classes } = useStyles();
+  const { posts } = usePosts();
 
-  const cards = articlesData.map((article) => (
+  const cards = posts?.map((post) => (
     <ArticleCard 
-      key={article.id}
-      image={article.image}
-      category={article.category}
-      title={article.title}
-      footer={article.footer}
-      author={article.author} 
+      key={post.id}
+      pid={post.id}
+      image={post.cover_image || post.social_image}
+      category={post.category}
+      title={post.title}
+      footer={post.tags}
+      author={{
+        name: post.user?.name,
+        description: post.user?.website_url,
+        image: post.user?.profile_image
+      }} 
     />
   ));
 
