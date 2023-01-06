@@ -90,7 +90,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
   ));
 
   return (
-    <Header height={56} mb={120}>
+    <Header height={56} mb={16}>
       <Container className={classes.inner}>
         <Link href="/">
           <Image className={classes.logo} src={logo.src} alt={'SimflexCloud'} width={200} />

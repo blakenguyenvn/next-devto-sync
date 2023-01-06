@@ -8,6 +8,7 @@ const useStyles = createStyles((theme) => ({
   },
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    color: '#fff'
   },
   footer: {
     padding: `${theme.spacing.xs}px ${theme.spacing.lg}px`,
