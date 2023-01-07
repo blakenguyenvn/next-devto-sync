@@ -15,18 +15,20 @@ export function Tag({ tagName = '' }: TagProps) {
   )
 }
 
-interface TagProps {
-  links: Array<string>;
+interface TagsProps {
+  tags: Array<string>;
 }
+
+const TagLinks = (tags) => {
+  return (tags.map((tagName) => (
+    <Tag key={tagName} tagName={tagName} />
+  )));
+};
 
 export function Tags({ tags }: TagsProps) {
-  console.log(`tags \n`, tags);
-  const TagLinks = (tags?.map((tagName) => (
-    <Tag key={tagName} tagName={tagName} />
-  )))
-  return (<TagLinks />);
-}
+  console.log("tags: \n", tags);
 
-// (tags?.map((tagName) => (
-//   <Tag key={tagName} tagName={tagName} />
-// )))
+  return (tags.map((tagName) => (
+    <Tag key={tagName} tagName={tagName} />
+  )));;
+}
