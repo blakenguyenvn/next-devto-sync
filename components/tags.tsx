@@ -9,7 +9,7 @@ export function Tag({ tagName = '' }: TagProps) {
         className={"crayons-tag"}
         href={`/t/${tagName}`}
       >
-        <span class="crayons-tag__prefix">#</span>{tagName}
+        <span className="crayons-tag__prefix">#</span>{tagName}
       </a>
     </>
   )
@@ -19,16 +19,14 @@ interface TagsProps {
   tags: Array<string>;
 }
 
-const TagLinks = (tags) => {
-  return (tags.map((tagName) => (
-    <Tag key={tagName} tagName={tagName} />
-  )));
-};
-
 export function Tags({ tags }: TagsProps) {
-  console.log("tags: \n", tags);
-
-  return (tags.map((tagName) => (
+  const tagsContent = tags?.map((tagName) => (
     <Tag key={tagName} tagName={tagName} />
-  )));;
+  ));
+
+  return (
+    <>
+      {tagsContent}
+    </>
+  );
 }

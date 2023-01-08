@@ -20,14 +20,28 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+interface PostProps {
+  id: string;
+  cover_image: string;
+  social_image: string;
+  category: string;
+  title: string;
+  tags: string;
+  user: {
+    name: string;
+    website_url: string;
+    profile_image: string;
+  }
+}
+
 export function ArticlesCardsGrid() {
   const { classes } = useStyles();
   const { posts } = usePosts();
 
-  const cards = posts?.map((post) => (
+  const cards = posts?.map((post: PostProps) => (
     <ArticleCard 
-      key={post.id}
-      pid={post.id}
+      key={post?.id}
+      pid={post?.id}
       image={post.cover_image || post.social_image}
       category={post.category}
       title={post.title}

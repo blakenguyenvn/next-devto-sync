@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app';
-import { DefaultHead } from 'components/Head';
+import { DefaultHead } from 'components/head';
 import { MantineProvider } from '@mantine/core';
 import '../styles/globals.css'
 import '../styles/postLibraries.css';
