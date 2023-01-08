@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface ArticleCardProps {
-  id: string;
+  pid: string;
   image: string;
   category: string;
   title: string;
