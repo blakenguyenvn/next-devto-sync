@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Text, Image } from '@mantine/core';
-import { Inter } from '@next/font/google';
 import { HeaderMiddle } from 'components/headerMiddle';
 import { FooterSocial } from 'components/footerSocial';
 import { HeroBullets } from 'components/heroBullets';
@@ -14,8 +13,6 @@ import { headersConfig, profile, introductionData } from 'config/information';
 import { usePost } from '../../swr/hooks';
 import { markdownToHtml } from '../../utils/markdown';
 import styles from '../../styles/Home.module.css';
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Post() {
   const router = useRouter();

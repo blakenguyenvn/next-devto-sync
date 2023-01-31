@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import { HeaderMiddle } from 'components/headerMiddle'
 import { FooterSocial } from 'components/footerSocial'
@@ -9,8 +8,6 @@ import { UserCardImage } from 'components/userCardImage'
 import { IntroductionImages } from 'components/introductionImages'
 import { ProjectsCardsGrid } from 'components/projectsCardsGrid'
 import { headersConfig, profile, introductionData } from 'config/information'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function About() {
   return (
